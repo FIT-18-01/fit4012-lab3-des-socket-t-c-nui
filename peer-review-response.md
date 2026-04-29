@@ -1,8 +1,8 @@
 # Peer Review Response
 
 ## Thông tin nhóm
-- Thành viên 1: TODO_STUDENT
-- Thành viên 2: TODO_STUDENT
+- Thành viên 1: Trần Duy Tuấn
+- Thành viên 2: Nguyễn Vân Đạt
 
 ## Thành viên 1 góp ý cho thành viên 2
 TODO_STUDENT: Góp ý ngắn gọn về phần việc, chất lượng code, test, hoặc tài liệu.

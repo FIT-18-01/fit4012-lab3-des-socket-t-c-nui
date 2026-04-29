@@ -12,18 +12,30 @@ Bài lab bám theo luồng hệ thống trong file hướng dẫn: Sender tạo 
 - Khi demo, giảng viên có thể hỏi chéo bất kỳ thành viên nào về **sender**, **receiver**, **DES-CBC**, **padding**, **threat model** và **ethics**.
 
 ## Team members
-- **Thành viên 1**: TODO_MEMBER_1 - MSSV: TODO_MEMBER_1_ID
-- **Thành viên 2**: TODO_MEMBER_2 - MSSV: TODO_MEMBER_2_ID
+- **Thành viên 1**: Trần Duy Tuấn - MSSV: 1876102004
+- **Thành viên 2**: Nguyễn Vân Đạt - MSSV: 1871020131
 
 ## Task division
-- **Thành viên 1 phụ trách chính**: TODO_ROLE_MEMBER_1
-- **Thành viên 2 phụ trách chính**: TODO_ROLE_MEMBER_2
-- **Phần làm chung**: TODO_SHARED_WORK
+- **Thành viên 1 phụ trách chính**: 
 
++ Quản lý Sender: Đảm nhiệm vận hành tiến trình gửi tin, kiểm tra tính đúng đắn của Key/IV được sinh ra.
+
++ Phân tích rủi ro: Chịu trách nhiệm chính cho file threat-model-1page.md, phân tích chuyên sâu về lỗ hổng "In-band Key Exchange" trong code mẫu.
+
++ Chủ trì báo cáo: Tổng hợp kết quả và hoàn thiện file report-1page.md.
+- **Thành viên 2 phụ trách chính**:
++ Quản lý Receiver: Đảm nhiệm vận hành tiến trình nhận tin, theo dõi luồng giải mã.
+
++ Thực thi kiểm thử & Logs: Chạy các bộ test case mẫu, trích xuất log từ màn hình Terminal vào thư mục logs/.
+
++ Peer Review: Hoàn thiện file peer-review-response.md.
+- **Phần làm chung**: 
++ logs
++ report-1page.md
 ## Demo roles
-- **Bạn nào demo Sender / gói tin / log gửi**: TODO_DEMO_ROLE_1
-- **Bạn nào demo Receiver / giải mã / log nhận**: TODO_DEMO_ROLE_2
-- **Cả hai cùng trả lời threat model và ethics**: TODO_DEMO_ROLE_SHARED
+- **Bạn nào demo Sender / gói tin / log gửi**: Trần Duy Tuấn
+- **Bạn nào demo Receiver / giải mã / log nhận**: Nguyễn Vân Đạt
+- **Cả hai cùng trả lời threat model và ethics**: Trần Duy Tuấn, Nguyễn Vân Đạt
 
 ## Mục tiêu học tập
 - Hiểu luồng hoạt động của hệ thống Sender/Receiver qua TCP socket.
