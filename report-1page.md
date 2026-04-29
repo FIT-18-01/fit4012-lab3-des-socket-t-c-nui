@@ -32,7 +32,26 @@ Bài Lab 3 tập trung vào việc xây dựng hệ thống truyền nhận dữ
 - Kiểm thử thủ công: Chạy song song 2 Terminal trên Windows, cấu hình chcp 65001 để hiển thị tiếng Việt, thực hiện gửi nhận bản tin thực tế.
 
 ## Kết quả
-TODO_STUDENT: Tóm tắt kết quả chạy, ảnh/log minh chứng, và ca kiểm thử quan trọng.
+1. Tóm tắt kết quả chạy thực tế
+- Quá trình truyền nhận diễn ra thông suốt trên môi trường Localhost (cổng 6000).
+
+- Phía Sender: Hệ thống chấp nhận bản tin nhập vào, tự động sinh khóa DES và IV ngẫu nhiên, sau đó đóng gói thành công gói tin nhị phân.
+
+- Phía Receiver: Nhận diện kết nối từ IP 127.0.0.1, bóc tách header chính xác và hoàn trả bản tin gốc không lỗi font.
+
+2. Minh chứng thực tế (Log trích xuất)
+- Dữ liệu ghi nhận từ phiên làm việc thực tế của nhóm:
+
++ Bản tin gốc: hello
+
++ Key (8-byte): 359f14f5f06b0c20
+
++ IV (8-byte): af4586f22039f98c
+
++ Ciphertext (Hex): 04c2ab232f38fcec
+
++ Trạng thái: Giải mã thành công (Success).
 
 ## Kết luận
-TODO_STUDENT: Rút ra bài học kỹ thuật và bài học bảo mật từ bài lab.
+- Bài học kỹ thuật: Hiểu rõ cách thức hoạt động của TCP Socket và quy trình xử lý dữ liệu ở dạng Byte Stream. Biết cách xử lý lỗi bảng mã (Unicode) trên Terminal Windows để đảm bảo tính sẵn sàng của ứng dụng.
+- Bài học bảo mật: Nhận diện được sự nguy hiểm của lỗi "In-band Key Exchange" (truyền khóa cùng dữ liệu). Mặc dù thuật toán DES-CBC bảo vệ được nội dung bản tin, nhưng cách thức thiết kế hệ thống vẫn tồn tại lỗ hổng lớn vì kẻ tấn công có thể dễ dàng lấy được khóa từ Header. Bài lab giúp củng cố tư duy về việc cần có một kênh truyền khóa riêng biệt hoặc sử dụng mã hóa bất đối xứng để trao đổi khóa trong thực tế.
