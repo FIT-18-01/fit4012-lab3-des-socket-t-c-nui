@@ -1,0 +1,25 @@
+[INFO] Time: 2026-04-29 20:05:12
+[INFO] Demo by: Tran Duy Tuan
+
+[INFO] Scenario: Encrypt and send DES-CBC message over socket
+
+[INFO] Sender started
+[INFO] Connecting to server at 127.0.0.1:6000...
+[INFO] Connected successfully
+
+[INFO] Preparing message: "hello"
+[INFO] Generating random 8-byte Key and IV...
+[INFO] Key: 359f14f5f06b0c20
+[INFO] IV:  af4586f22039f98c
+
+[INFO] Encrypting with DES-CBC + PKCS#7 Padding...
+[INFO] Encryption completed. 
+[INFO] Ciphertext (Hex): 04c2ab232f38fcec
+
+[INFO] Building packet (Header 20B + Ciphertext)...
+[INFO] Sending data to Receiver...
+[INFO] [+] Đã gửi bản mã thành công.
+
+[INFO] Result: SUCCESS
+[INFO] Error: None
+[INFO] Sender finished

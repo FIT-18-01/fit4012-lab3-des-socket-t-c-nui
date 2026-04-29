@@ -1,0 +1,24 @@
+[INFO] Time: 2026-04-29 20:05:00
+[INFO] Demo by: Tran Duy Tuan
+
+[INFO] Scenario: Receive and decrypt DES-CBC message over socket
+
+[INFO] Receiver started
+[INFO] Đang lắng nghe 0.0.0.0:6000...
+
+[INFO] Client connected from 127.0.0.1 (Port: 63620)
+
+[INFO] Receiving encrypted data...
+[INFO] Header parsed: Key(8B), IV(8B), Length(4B) extracted
+[INFO] Ciphertext received: 04c2ab232f38fcec
+
+[INFO] Decrypting message...
+[INFO] PKCS#7 Unpadding applied
+[INFO] Decryption done
+
+[INFO] [+] Bản tin gốc: hello
+
+[INFO] Result: SUCCESS
+[INFO] Error: None
+
+[INFO] Receiver finished
