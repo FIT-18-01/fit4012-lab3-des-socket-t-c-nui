@@ -30,4 +30,4 @@ jobs:
         run: bash .github/scripts/check_submission.sh
 
       - name: Run tests
-        run: pytest -q
+        run: python -m pytest -q
