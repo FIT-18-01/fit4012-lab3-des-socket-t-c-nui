@@ -15,12 +15,15 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
+          # Tạm thời bỏ cache để đảm bảo cài đặt mới hoàn toàn
+          # cache: 'pip' 
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          # Cài đặt pytest và các thư viện cần thiết
+          python -m pip install pytest
+          if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
 
       - name: Static syntax check
         run: |
@@ -30,4 +33,7 @@ jobs:
         run: bash .github/scripts/check_submission.sh
 
       - name: Run tests
+
         run: python -m pytest -q
+
+
